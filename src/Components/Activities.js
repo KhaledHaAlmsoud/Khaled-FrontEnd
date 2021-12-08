@@ -12,7 +12,7 @@ const [activArr, setActivArr] = useState([])
 useEffect(() => {
     const getData =async()=>{
     try { 
-      const response= await axios.get("http://localhost:5000/Activitie" );
+      const response= await axios.get("https://khaked-project-backend.herokuapp.com/Activitie" );
       setActivArr(response.data)
       console.log(response.data);;
     }catch (error) {
@@ -26,7 +26,7 @@ useEffect(() => {
 
   const addTic= async(walaa)=>{
     console.log("cliiiiiiiick");
-    const res=await axios.post("http://localhost:5000/oneEvent",{
+    const res=await axios.post("https://khaked-project-backend.herokuapp.com/oneEvent",{
       walaa:walaa
     } , {   headers: {authorization: `Bearer ${Token}`}}  )
     

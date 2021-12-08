@@ -6,7 +6,7 @@ export default function Cart({ Token }) {
 
   useEffect(async () => {
     try {
-      const res = await axios.get("http://localhost:5000/oneEvent", {
+      const res = await axios.get("https://khaked-project-backend.herokuapp.com/oneEvent", {
         headers: { authorization: `Bearer ${Token}` },
       });
       console.log(res.data[0].cart);
@@ -18,7 +18,7 @@ export default function Cart({ Token }) {
   }, []);
 
   const dalateEvent = async (id) => {
-    const resDel = await axios.delete(`http://localhost:5000/Activitie/${id}`, {
+    const resDel = await axios.delete(`https://khaked-project-backend.herokuapp.com/${id}`, {
       headers: { authorization: `Bearer ${Token}` },
     });
      setTicArr(resDel.data.cart);

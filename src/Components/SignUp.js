@@ -25,7 +25,7 @@ const passValue=(e)=>{
         }
 
 const addUser=async ()=>{
-    const response = await axios.post("http://localhost:5000/signUp", { name: name,
+    const response = await axios.post("https://khaked-project-backend.herokuapp.com/signUp", { name: name,
         email: email,
         password: password,
       });
